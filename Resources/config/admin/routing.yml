@@ -1,0 +1,28 @@
+viweb_news:
+    resource: |
+        alias: viweb.news
+        redirect: update
+        except: ['show']
+        section: admin
+        templates: ViwebSystemBundle:Crud
+        grid: viweb_news
+        vars:
+            all:
+                subheader: app.ui.supplier
+            index:
+                icon: 'outline'
+    type: sylius.resource
+viweb_news_category:
+    resource: |
+        alias: viweb.news_category
+        redirect: update
+        except: ['show']
+        section: admin
+        templates: ViwebSystemBundle:Crud
+        grid: viweb_news_category
+        vars:
+            all:
+                subheader: app.ui.supplier
+            index:
+                icon: 'outline'
+    type: sylius.resource

@@ -1,0 +1,20 @@
+sylius_resource:
+    resources:
+        viweb.news:
+            classes:
+                model: Viweb\NewsBundle\Entity\News
+                repository: Viweb\NewsBundle\Repository\NewsRepository
+                form: Viweb\NewsBundle\Form\Type\NewsType
+            translation:
+                classes:
+                    model: Viweb\NewsBundle\Entity\NewsTranslation
+                    form: Viweb\NewsBundle\Form\Type\NewsTranslationType
+        viweb.news_category:
+            classes:
+                model: Viweb\NewsBundle\Entity\Category
+                repository: Viweb\NewsBundle\Repository\CategoryRepository
+                form: Viweb\NewsBundle\Form\Type\CategoryType
+            translation:
+                classes:
+                    model: Viweb\NewsBundle\Entity\CategoryTranslation
+                    form: Viweb\NewsBundle\Form\Type\CategoryTranslationType

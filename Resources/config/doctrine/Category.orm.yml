@@ -1,0 +1,15 @@
+Viweb\NewsBundle\Entity\Category:
+    type: entity
+    table: null
+    repositoryClass: Viweb\NewsBundle\Repository\CategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        news:
+            targetEntity: Viweb\NewsBundle\Entity\News
+            mappedBy: category
+    lifecycleCallbacks: {  }

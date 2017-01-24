@@ -1,0 +1,29 @@
+Viweb\NewsBundle\Entity\News:
+    type: entity
+    table: null
+    repositoryClass: Viweb\NewsBundle\Repository\NewsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        createdAt:
+            type: datetime
+        updatedAt:
+            type: datetime
+            nullable: true
+        sticky:
+            type: boolean
+            nullable: true
+    manyToOne:
+        category:
+            targetEntity: Viweb\NewsBundle\Entity\Category
+            inversedBy: news
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
+    lifecycleCallbacks:
+        prePersist: [prePersistCallback]
+        preUpdate: [preUpdateCallback]

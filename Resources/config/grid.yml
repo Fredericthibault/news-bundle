@@ -1,0 +1,54 @@
+sylius_grid:
+    grids:
+        viweb_news:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Viweb\NewsBundle\Entity\News
+            fields:
+                title:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: sylius.ui.create
+                        icon: 'icon-external-link'
+                        options: { }
+                item:
+                    update:
+                        type: update
+                        label: sylius.ui.edit
+                        options: { }
+                    delete:
+                        type: delete
+                        label: sylius.ui.delete
+                        options: { }
+        viweb_news_category:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Viweb\NewsBundle\Entity\Category
+            fields:
+                title:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+            actions:
+                main:
+                    create:
+                        type: create
+                        label: sylius.ui.create
+                        icon: 'icon-external-link'
+                        options: { }
+                item:
+                    update:
+                        type: update
+                        label: sylius.ui.edit
+                        options: { }
+                    delete:
+                        type: delete
+                        label: sylius.ui.delete
+                        options: { }

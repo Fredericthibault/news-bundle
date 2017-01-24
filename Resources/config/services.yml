@@ -1,0 +1,5 @@
+services:
+    viweb_news.admin_menu_listener:
+        class: Viweb\NewsBundle\EventListener\ConfigureAdminMenuListener
+        tags:
+          - { name: kernel.event_listener, event: viweb_system.menu_admin_configure, method: onMenuConfigure }

@@ -1,0 +1,23 @@
+Viweb\NewsBundle\Entity\NewsTranslation:
+    type: entity
+    table: null
+    repositoryClass: Viweb\NewsBundle\Repository\NewsTranslationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '500'
+        excerpt:
+            type: text
+            nullable: true
+        body:
+            type: text
+        slug:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
