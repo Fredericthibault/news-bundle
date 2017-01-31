@@ -1,8 +1,8 @@
-viweb_news:
+viweb_admin_news:
     resource: |
         alias: viweb.news
         redirect: update
-        except: ['show']
+        except: ['show', 'update']
         section: admin
         templates: ViwebSystemBundle:Crud
         grid: viweb_news
@@ -12,11 +12,20 @@ viweb_news:
             index:
                 icon: 'outline'
     type: sylius.resource
-viweb_news_category:
+viweb_admin_news_update:
+    path: /news/{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: viweb.controller.news:updateAction
+        _sylius:
+            section: admin
+            template: ViwebSystemBundle:Crud:update.html.twig
+
+viweb_admin_news_category:
     resource: |
         alias: viweb.news_category
         redirect: update
-        except: ['show']
+        except: ['show', 'update']
         section: admin
         templates: ViwebSystemBundle:Crud
         grid: viweb_news_category
@@ -26,3 +35,12 @@ viweb_news_category:
             index:
                 icon: 'outline'
     type: sylius.resource
+
+viweb_admin_news_category_update:
+    path: /news/categorys/{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: viweb.controller.categories:updateAction
+        _sylius:
+            section: admin
+            template: ViwebSystemBundle:Crud:update.html.twig
