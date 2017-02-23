@@ -3,6 +3,7 @@
 namespace Viweb\NewsBundle\Entity;
 use Sylius\Component\Resource\Model\AbstractTranslation;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Viweb\SeoBundle\Model\SeoTrait;
 
 /**
  * NewsTranslation
