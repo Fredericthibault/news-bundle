@@ -25,7 +25,8 @@ Viweb\NewsBundle\Entity\News:
                 name: category_id
                 referencedColumnName: id
         photo:
-            taegetEntity: Viweb\MediaBundle\Entity\Media
+            targetEntity: Viweb\MediaBundle\Entity\Media
+            cascade: ['persist']
             joinColumn:
                 name: image_id
                 referencedColumnName: id
