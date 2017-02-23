@@ -19,6 +19,11 @@ class NewsTranslation extends AbstractTranslation implements ResourceInterface
         $this->intializeSeo();
     }
 
+    public function getDefaultKeys(): array
+    {
+        return ['description', 'title', 'keywords'];
+    }
+
     /**
      * @var int
      */
