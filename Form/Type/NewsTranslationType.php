@@ -8,6 +8,7 @@
 
 namespace Viweb\NewsBundle\Form\Type;
 
+use Burgov\Bundle\KeyValueFormBundle\Form\Type\KeyValueType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
