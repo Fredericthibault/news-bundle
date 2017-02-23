@@ -3,6 +3,7 @@
 namespace Viweb\NewsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -13,4 +14,13 @@ class DefaultController extends Controller
             'news' => $news
         ]);
     }
+
+    public function singleAction(Request $request, int $id)
+    {
+        $new = $this->get('viweb.repository.news')->find($id);
+        return $this->render('ViwebNewsBundle:Default:single.html.twig', [
+            'new' => $new
+        ]);
+    }
+
 }

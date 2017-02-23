@@ -1,3 +1,7 @@
 viweb_news_homepage:
     path:     /
     defaults: { _controller: ViwebNewsBundle:Default:index }
+
+viweb_news_single:
+    path: /{id}
+    defaults: { _controller: ViwebNewsBundle:Default:single }
