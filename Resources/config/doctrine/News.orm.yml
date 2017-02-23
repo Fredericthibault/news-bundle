@@ -24,6 +24,11 @@ Viweb\NewsBundle\Entity\News:
             joinColumn:
                 name: category_id
                 referencedColumnName: id
+        photo:
+            taegetEntity: Viweb\MediaBundle\Entity\Media
+            joinColumn:
+                name: image_id
+                referencedColumnName: id
     lifecycleCallbacks:
         prePersist: [prePersistCallback]
         preUpdate: [preUpdateCallback]

@@ -41,6 +41,26 @@ class News implements ResourceInterface, TranslatableInterface
      */
     private $sticky;
 
+    private $photo;
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     * @return News
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+        return $this;
+    }
+
 
     /**
      * Get id

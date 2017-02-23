@@ -14,6 +14,7 @@ use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Viweb\MediaBundle\Form\Type\MediaType;
 use Viweb\NewsBundle\Entity\News;
 
 
@@ -38,8 +39,10 @@ class NewsType extends AbstractResourceType
                 'required' => false
             ])
             ->add('sticky', CheckboxType::class)
+            ->add('photo', MediaType::class)
             ->add('translations', ResourceTranslationsType::class, [
                 'entry_type' => NewsTranslationType::class
             ]);
+
     }
 }
