@@ -31,6 +31,13 @@ class NewsTranslationType extends AbstractResourceType
             ->add('excerpt', TextareaType::class)
             ->add('body', TextareaType::class)
             ->add('slug', TextType::class)
+
             ;
+        $builder->add('seoCollection', KeyValueType::class, [
+            'value_type' => TextType::class,
+            'value_options' => ['attr' => ['class' => 'span6 pull-right']],
+            'key_options' => ['attr' =>['class' => 'span4']],
+            'required' => false
+        ]);
     }
 }

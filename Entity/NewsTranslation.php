@@ -9,6 +9,15 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  */
 class NewsTranslation extends AbstractTranslation implements ResourceInterface
 {
+    use SeoTrait {
+        __construct as intializeSeo;
+    }
+
+    public function __construct()
+    {
+        $this->intializeSeo();
+    }
+
     /**
      * @var int
      */
